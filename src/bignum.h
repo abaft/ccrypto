@@ -9,10 +9,10 @@ typedef struct\
   char byte[ (size)%8 == 0 ? (size)/8 : (size/8) + 1 ];\
 } typeName;\
 \
-char* bignum_ ## typeName ## _printValue (typeName n)\
+char* bignum_ ## typeName ## _printValue (typeName* n)\
 {\
   int nu = sizeof(typeName) * 2;\
-  char* ptr = n.byte;\
+  char* ptr = n->byte;\
   char rtn[ nu + 10 ];\
   int i, j;\
   for (i = 0, j = nu - 1; i < nu; ++i, --j)\

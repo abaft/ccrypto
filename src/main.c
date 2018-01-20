@@ -6,9 +6,9 @@ bignum_gen_uint(mint, 500);
 int main()
 {
   mint x,y,z;
-  bignum_mint_printValue(x);
+  bignum_mint_printValue(&x);
   printf("\n");
-  bignum_mint_printValue(y);
+  bignum_mint_printValue(&y);
   printf("\n");
-  bignum_mint_printValue(x);
+  bignum_mint_printValue(&x);
 }
